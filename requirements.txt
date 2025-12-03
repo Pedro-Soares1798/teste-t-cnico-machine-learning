@@ -1,3 +1,4 @@
+#bibliotecas necessárias para o projeto
 fastapi
 uvicorn[standard]
 scikit-learn

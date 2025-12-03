@@ -11,10 +11,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 # copiar código
 COPY . .
 
-# criar pasta data/model caso não exista
+# criar pasta data/model
 RUN mkdir -p /app/data /app/model
 
-# gerar dados e treinar durante build (opcional; aqui deixamos como exemplo)
+# gerar dados e treinar durante build 
 RUN python src/prepare.py && python src/train.py
 
 EXPOSE 8000

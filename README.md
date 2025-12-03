@@ -1,6 +1,6 @@
 # Water Quality - MLOps Minimal Project
 
-**Resumo:** Projeto simples para o desafio técnico — classifica água como "boa" (1) ou "ruim" (0).
+**Resumo:** Projeto para o desafio técnico — classifica água como "boa" (1) ou "ruim" (0).
 
 ## Como o projeto está organizado
 - `src/prepare.py` → gera dataset sintético (data/water_quality.csv)
@@ -10,13 +10,13 @@
 - `Dockerfile` → container com a API
 - `Makefile` → comandos úteis
 
-## Requisitos obrigatórios atendidos
+## Requisitos obrigatórios
 1. **Python + ML**: modelo treinado com scikit-learn (RandomForest).
 2. **Pipeline de MLOps**: separação clara (prepare/train/predict) e métricas (accuracy, F1).
 3. **Deploy**: container Docker com API FastAPI.
 4. **README**: instruções de execução e uso.
 
-## Como executar (passo a passo para leigos)
+## Como executar 
 1. Instalar Python 3.10+ e pip.
 2. Clonar o repo.
 3. Criar e ativar virtualenv (opcional):
