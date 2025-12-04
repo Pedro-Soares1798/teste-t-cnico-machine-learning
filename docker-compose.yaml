@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  # Nome do serviço: Pode ser a sua API
+  water-quality-api:
+    
+    # Instrução para construir a imagem usando o Dockerfile no diretório atual ('.')
+    build: .
+    
+    # Define um nome fixo para o container
+    container_name: water-api
+    
+    # Mapeamento de portas: Host:Container
+    # Usando a porta 8000 do seu computador (Host) para a 8000 do container
+    ports:
+      - "8000:8000"
+    
+    # Garante que o container tente reiniciar se houver falhas inesperadas
+    restart: always
+
+    # (Opcional, mas recomendado para desenvolvimento) 
+    # Mapeia o código da sua máquina para dentro do container
+    # Isso permite que você edite o código na sua máquina e ele reflita no container (em alguns casos, se o uvicorn estiver configurado para watch)
+    # volumes:
+    #   - .:/app
