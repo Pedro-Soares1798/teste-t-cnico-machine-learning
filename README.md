@@ -1,4 +1,4 @@
-# Water Quality - MLOps Minimal Project
+# Water Quality - MLOps Project
 
 **Resumo:** Projeto para o desafio técnico — classifica água como "boa" (1) ou "ruim" (0).
 
@@ -12,7 +12,7 @@
 
 ## Requisitos obrigatórios
 1. **Python + ML**: modelo treinado com scikit-learn (RandomForest).
-2. **Pipeline de MLOps**: separação clara (prepare/train/predict) e métricas (accuracy, F1).
+2. **Pipeline de MLOps**: (prepare/train/predict) e métricas (accuracy, F1).
 3. **Deploy**: container Docker com API FastAPI.
 4. **README**: instruções de execução e uso.
 
@@ -31,17 +31,20 @@
    ```
 5. Gerar dados e treinar:
    ```
-   make prepare
-   make train
+   `src/prepare.py` → gera dataset sintético (data/water_quality.csv)
+-  `src/train.py` → treina RandomForest e salva em model/model.pkl
+
    ```
 6. Rodar API local:
-   ```
-   make run
+# utilizar caso não funcione o arquivo start.compose.bat
+run_api.py
+
+# para acessar a API
    ```
    Acesse `http://localhost:8000/docs` e teste o endpoint `/predict`.
 
 ## Exemplo de uso da API
-POST `http://localhost:8000/predict`
+POST `http://localhost:8000/docs`
 Body (JSON):
 ```json
 {

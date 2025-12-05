@@ -1,11 +1,10 @@
 # run_api.py
-# Este arquivo deve ser colocado no diretório raiz do projeto (water-quality-mlops/)
 
 import os
 import uvicorn
 
 # 1. Configuração do PYTHONPATH:
-# Define a variável de ambiente PYTHONPATH para incluir o diretório atual ('.').
+# Defina a variável de ambiente PYTHONPATH para incluir o diretório atual ('.').
 # Isso resolve o erro 'ModuleNotFoundError: No module named 'src'' 
 os.environ['PYTHONPATH'] = '.'
 

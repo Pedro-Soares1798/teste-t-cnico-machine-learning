@@ -15,6 +15,7 @@ docker-build:
 
 docker-run:
 	docker run -p 8000:8000 water-quality-ml
-
+docker-full:
+# run_api.py para rodar todos os processos anteriores
 test:
 	pytest -q
